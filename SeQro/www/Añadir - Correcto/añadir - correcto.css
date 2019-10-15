@@ -1,0 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    background: #dfdddd;
+    
+}
+
+.añadir{
+    
+    margin-top: 100px;
+    width: 736px;
+    height: 250px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff;
+
+}
+
+.pull{
+    
+    width: 45px;
+    height: 5px;
+    background: #c2c2c2;
+    border-radius: 8px;
+    margin-top: 9px;
+    
+}
+
+.titulo{
+
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+
+}
+
+.mensaje > svg{
+
+    color: #009A88;
+    font-size: 87px;
+
+}
+
+.mensaje{
+
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15%;
+
+}
