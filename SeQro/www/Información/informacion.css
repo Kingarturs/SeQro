@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body, html{
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/mapa.png");
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#navegacion{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px -4px 15px -5px rgba(0,0,0,0.25);
+}
+
+.button{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border: none;
+    border-right: 1px rgb(211, 211, 211) solid;
+    font-size: 20px;
+    color: rgb(65, 65, 65);
+    outline-color: #009A88;
+}
+
+.button>p{
+    font-size: 10px !important;
+    margin-top: 5px;
+}
+
+.circle{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .green{
+        background-color: #009A88;
+    }
+    .red{
+        background-color: #C0392B;
+    }
+
+#location{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+#informacion{
+    width: 100%;
+    height: 280px;
+    box-shadow: 0px -4px 15px -5px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+    #title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+        #zona{
+            font-size: 24px;
+            color: #C0392B;
+            font-weight: bold;
+        }
+        #peligro{
+            font-weight: bold;
+        }
+
+    #reportes{
+        display: flex;
+        justify-content: flex-start;
+        width: 80%;
+        height: 20px;
+        margin: 15px 0px;
+    }
+    
+    #burbujas{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        justify-content: space-between;
+    }
+        .reporte{
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
