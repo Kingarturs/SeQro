@@ -92,3 +92,18 @@ html, body, .contenedor
 
 }
 
+.contenedorMensaje{
+
+    height: 20%;
+    position: absolute;
+    z-index: 3;
+    padding-bottom: 80%;
+
+}
+
+.mensaje{
+
+    color: #000000 !important;
+    background-color: #ffffff;
+
+}

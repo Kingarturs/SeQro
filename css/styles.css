@@ -1,0 +1,730 @@
+:root {
+  --verdeoscuro: #148F84;
+  --azulprincipal: #1D323C;
+  --azuloscuro: #376BFB;
+  --verdeclaro: #A2E5AF;
+  --blanco: #FCFEFF;
+  --negro: #080808;
+  --gris: #EAEAEA;
+}
+
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Poppins', sans-serif;
+	text-rendering: optimizeLegibility;
+}
+
+html, body{
+	width: 100%;
+	height: 100vh;
+}
+
+/*ESTILOS GENERALES*/
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.start{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.end{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
+}
+
+.between{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+.around{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+
+.column{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.ccenter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.wrap{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    -ms-box-orient: horizontal;
+}
+
+.nopadding{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+p, h1, h2, h3, h4{
+	cursor: default;
+	text-rendering: optimizeLegibility;
+}
+
+.bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 999;
+	background: var(--azulprincipal);
+	display: none;
+}
+
+#backImg{
+	background-image: url(../img/qro2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.ver{
+	display: block !important;
+}
+
+.noVer{
+	display: none !important;
+}
+
+/*BARRA DEL MENÚ*/
+.barra{
+	height: 60px;
+	background: var(--azulprincipal);
+	padding: 10px;
+	box-sizing: border-box;
+	box-shadow: -1px 4px 12px -4px rgba(0,0,0,0.46);
+	z-index: 9999;
+}
+	.barra .logo{	
+		width: 10%;
+		float: left;
+		position: relative;
+		padding-left: 10px;
+		box-sizing: border-box;
+	}
+		.logo img{
+			height: 40px;
+		}
+
+	.barra .ham{	
+		width: auto;
+		height: 100%;
+		float: right;
+		position: relative;
+		right: 10px;
+	}
+		.ham img{
+			height: 30px;
+		}
+
+	.barra .menu{
+		width: 90%;
+		height: 100%;
+		float: left;
+		position: relative;
+		background: url(../img/bgfooter.png);
+		background-size: cover;
+	}
+		.menu ul{
+			width: 100%;
+			height: 100%;
+			float: left;
+			position: relative;
+			margin-bottom: 0px !important;
+			padding-left: 10px;
+			box-sizing: border-box;
+		}
+			.menu ul li{
+				height: 100%;
+				float: left;
+				position: relative;
+				list-style: none;
+			}
+				.menu ul li a{
+					color: var(--blanco) !important;
+					text-decoration: none;
+					font-size: 1.3rem;
+					font-weight: 400;
+				}
+				.menu ul li .actual{
+					box-shadow: inset 0 -2px 0 var(--verdeclaro);
+				}
+
+	.barra .menu-m{
+		width: 100%;
+		height: auto;
+		float: left;
+		position: relative;
+		background-size: cover;
+		margin-top: 10px;
+		background: var(--azulprincipal);
+		display: none;
+	}
+		.menu-m ul{
+			width: 100%;
+			height: auto;
+			float: left;
+			position: relative;
+			margin-bottom: 0px !important;
+		}
+			.menu-m ul li{
+				height: 40px;
+				float: left;
+				position: relative;
+				list-style: none;
+				border-bottom: 1px solid rgba(0,0,0,.2);
+			}
+				.bt{
+					border-top: 1px solid rgba(0,0,0,.2);
+				}
+				.bb{
+					border-bottom: none !important;
+				}
+				.menu-m ul li:hover{
+					background: var(--verdeclaro);
+				}
+				.menu-m ul li a{
+					color: var(--blanco) !important;
+					text-decoration: none;
+					padding-bottom: 5px;
+					box-sizing: border-box;
+				}
+
+/*CONTENEDORES GRALES*/
+.wrapper {
+    width: 100%;
+    height: calc(100% - 60px);
+    float: left;
+    position: relative;
+}
+	.content{
+	    width: 100%;
+	    height: 100%;
+	    float: left;
+	    position: relative;
+	    overflow-y: auto;
+	}
+	/*TITULOS PRINCIPALES*/
+	.ocho{
+		height: 80%;
+	}
+	.dos{
+		height: 20%;
+	}
+		.tiempo{
+			float: left;
+			position: relative;
+			text-align: center;
+		}
+			.tiempo h2{
+				color: white;
+				font-weight: 400;
+				font-size: 1.8rem;
+				text-shadow: 0px 3px 6px rgba(0,0,0,.5);
+				text-align: center;
+				color: #FCFEFF;
+				margin-bottom: 5px;
+				margin-top: 0px !important;
+			}
+			.tiempo h1{
+				color: white;
+				font-weight: 400;
+				font-size: 4rem;
+				text-shadow: 0px 3px 6px rgba(0,0,0,.5);
+				margin-bottom: 5px;
+				margin-top: 0px !important;
+				height: auto;
+			}
+			.tiempo .grados{
+				color: white;
+				font-weight: 400;
+				font-size: 4.5rem;
+				text-shadow: 0px 3px 6px rgba(0,0,0,.5);
+			}
+			.fade-in-top{-webkit-animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) both}
+			/* ----------------------------------------------
+			 * Generated by Animista on 2019-10-4 13:12:32
+			 * Licensed under FreeBSD License.
+			 * See http://animista.net/license for more info. 
+			 * w: http://animista.net, t: @cssanimista
+			 * ---------------------------------------------- */
+
+			@-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+			.resumen h3{
+				color: white;
+				font-weight: 400;
+				font-size: 1.5rem;
+				text-shadow: 0px 3px 6px rgba(0,0,0,.5);
+				margin-bottom: 0px !important;
+				margin-top: 0px !important;
+			}
+
+			.resumen h2{
+				color: white;
+				font-weight: 500;
+				font-size: 2rem;
+				text-shadow: 0px 3px 6px rgba(0,0,0,.5);
+				margin-top: 0px !important;
+				margin-bottom: 2px !important;
+			}
+			.resumen img{
+				height: 25px;
+				cursor: pointer;
+			}
+
+	/*TITULOS*/
+	.content>h1{
+		text-align: center;
+		color: var(--verdeoscuro);
+		margin-bottom: 5px !important;
+		font-weight: 500;
+		padding-left: 5px;
+		padding-right: 5px;
+		box-sizing: border-box;
+	}
+	.content>p{
+		text-align: center;
+		color: var(--negro);
+		margin-bottom: 0px !important;
+		font-size: 1.4rem;
+		font-weight: 400;
+		padding-left: 8px;
+		padding-right: 8px;
+		box-sizing: border-box;
+	}
+
+	.content>h2{
+		color: var(--verdeoscuro);
+		width: 100%;
+		font-size: 2rem;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 10px;
+		box-sizing: border-box;
+	}
+
+		.justify{
+			text-align: justify !important;
+			color: var(--negro);
+			margin-bottom: 0px !important;
+			font-size: 1.2rem;
+			font-weight: 400;
+			padding-left: 15px;
+			padding-right: 15px;
+			box-sizing: border-box;
+		}
+
+	/*MAPA RESUMEN*/
+	.mapa{
+		height: 500px;
+		float: left;
+		position: relative;
+		background: #F5ECCE;
+		margin-top: 10px;
+	}
+		.mapa div{
+			background: red;
+			height: 100%;r
+		}
+
+	.mapa-estaciones{
+		float: left;
+		position: relative;
+		height: auto;
+		padding: 20px;
+		box-sizing: border-box;
+		margin-top: 10px;
+	}
+		.mapa-estaciones select{
+			height: 30px;
+			float: left;
+			position: relative;
+			outline: none !important;
+			border: 1px solid rgba(0,0,0,.2);
+			cursor: pointer;
+			border-radius: 10px;
+			background: none !important;
+		}
+	.rev-estacion-no{
+		height: 200px;
+		float: left;
+		position: relative;		
+		margin: 15px 0;
+		border-radius: 5px;
+		background: var(--gris);
+	}
+		.rev-estacion-no .rev-h1{
+			text-align: center;
+			font-size: 1.8rem;
+			color: rgba(0,0,0,.6);
+			font-weight: 400;
+		}
+		.rev-estacion-no .rev-p{
+			text-align: center;
+			font-size: 1.2rem;
+			color: rgba(0,0,0,.5);
+		}
+
+	.rev-estacion{
+		height: auto;
+		float: left;
+		position: relative;		
+		margin: 15px 0;
+		border-radius: 5px;
+		border: 1px solid rgba(0,0,0,.2);
+		padding: 15px;
+		box-sizing: border-box;
+	}
+			.rev-nombre{
+				width: 100%;
+				height: 30%;
+				float: left;
+				position: relative;
+			}
+				.rev-nombre h1{
+					text-align: center;
+					font-size: 1.8rem;
+					color: rgba(0,0,0,.8);
+					font-weight: 400;
+					margin-bottom: 0px;
+					margin-top: 0px;
+				}
+				.rev-nombre p{
+					text-align: center;
+					font-size: 1.4rem;
+					color: rgba(0,0,0,.6);
+					font-weight: 400;
+					margin-bottom: 10px;	
+				}
+			.rev-cuerpo{
+				width: 100%;
+				height: 70%;
+				float: left;
+				position: relative;
+				padding: 20px 5px 10px 5px;
+				box-sizing: border-box;
+			}
+				.rev-cuerpo div{
+					float: left;
+					position: relative;
+					padding: 5px;
+					box-sizing: border-box;
+				}
+					.imagen{
+						float: left;
+						position: relative;
+						width: 100%;
+						height: 80%;
+					}
+					.concepto{
+						float: left;
+						position: relative;
+						width: 100%;
+						height: 20%;
+						font-weight: 500 !important;
+						font-size: 1.1rem !important;
+					}
+						.rev-cuerpo img{
+							height: 35px;
+							margin-right: 10px !important;
+						}					
+						.rev-cuerpo p{
+							font-size: 1.3rem;
+							font-weight: 300;
+							text-align: center;
+							margin-bottom: 0px !important;
+						}
+
+	/*NOSOTROS
+	PARTICIPANTES*/
+
+	.participantes{
+		height: auto;
+		float: left;
+		position: relative;
+		margin-bottom: 10px;
+	}
+		.participantes h2{
+			font-size: 1.8rem;
+			color: var(--negro);
+		}
+		.participantes .imgs{
+			float: left;
+			position: relative;
+		}
+			.imgs img{
+				height: 50px;
+				margin: 5px 10px;
+			}
+
+		.texto{
+			width: 90%;
+			margin-left: 5%;
+			float: left;
+			position: relative;
+			height: auto;
+		}
+			.texto h3{
+				width: 100%;
+				font-size: 1.6rem;
+
+			}
+			.texto p{
+				text-align: justify;
+				font-size: 1.4rem;
+			}
+
+			.dos-img{
+				float: left;
+				position: relative;
+				padding: 15px;
+				box-sizing: border-box;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+			}
+				.dos-img img{
+					margin: 5px;
+				}
+
+		.miembros{
+			width: 90%;
+			margin-left: 5%;
+			height: auto;
+    		float: left;
+    		position: relative;
+    		margin-bottom: 10px;
+		}
+			.miembros h2{
+				color: var(--verdeoscuro);
+				width: 100%;
+				font-size: 2rem;
+				margin-bottom: 10px;
+				margin-top: 0px !important;
+			}
+
+			.tarjeta{
+				float: left;
+				position: relative;
+				margin-left: 1%;
+				margin-top: 10px !important;
+				margin-bottom: 15px;
+			}
+				.grado{
+					font-size: 1.5rem;
+					font-weight: 500;
+					text-align: center;
+					margin-bottom: 10px !important;
+				}
+				.puesto{
+					font-size: 1.3rem;
+					text-align: center;
+				}
+				.leer{
+					color: var(--azuloscuro);
+					text-align: center;
+					font-size: 1.2rem;
+					font-weight: 600;
+					cursor: pointer;
+				}
+				/*DIVS*/
+				.foto{
+					display: block;
+				}
+
+				.info{
+					display: none;
+				}
+					.foto-mini{
+						background: var(--azulprincipal);
+					}
+						.foto-mini p, .foto-mini i{
+							margin-bottom: 0px !important;
+							color: var(--blanco) !important;
+							font-size: 1.1rem;
+							padding: 5px;
+							box-sizing: border-box;
+						}
+						.foto-mini i{
+							cursor: pointer;
+							margin-right: 5px;
+						}
+				.cv{
+					padding: 10px;
+					box-sizing: border-box;
+					font-size: 1.2rem !important;
+					text-align: justify;
+				}
+
+	/*ESTACIONES
+	METEOROLOGIA*/
+	.estaciones{
+		float: left;
+		position: relative;
+		padding-left: 30px;
+		padding-right: 30px;
+		box-sizing: border-box;
+	}
+		.estacion{
+			/*margin-left: 5%;*/
+		}
+
+
+	/*FOOTER*/
+	footer{
+		height: auto;
+		background: var(--azulprincipal);
+		float: left;
+		position: relative;
+		padding-bottom: 10px;
+		box-sizing: border-box;
+	}
+		footer h2{
+			color: var(--verdeoscuro);
+			font-size: 1.4rem;
+		}
+		footer div{
+			height: auto;
+			float: left;
+			position: relative;
+		}
+			footer ul{
+				float: left;
+				position: relative;
+				width: 100%;
+				margin-bottom: 0px !important;
+			}
+				footer ul li{
+					width: 100%;
+					list-style: none;
+					padding: 2px;
+					box-sizing: border-box;
+				}
+					footer ul li a, footer ul li{
+						width: 100% !important;
+						color: var(--blanco);
+						font-weight: 300;
+						font-size: 1.2rem;
+						text-decoration: none;
+						text-align: justify;
+					}
+					footer ul li a:hover{
+						color: var(--blanco);
+						text-decoration: none;
+					}
+						footer ul li img{
+							height: 22px;
+							margin-right: 10px;
+						}
+						footer .colab img{
+							height: 50px;
+						}
+
+
+
+@media (max-width: 768px){
+	/*CONTENEDOR GRAL*/
+	/*titulos*/
+		.tiempo h2{
+			font-size: 1.6rem;
+		}
+		.tiempo h1{
+			font-size: 3rem;
+		}
+
+	/*TEXTO IMGS*/
+	.texto p{
+		text-align: justify;
+		font-size: 1.3rem;
+	}
+	.dos-img{
+		padding: 10px;
+		flex-direction: column;
+	}
+
+	/*PARTICIPANTES*/
+	.wrap{
+		justify-content: center !important;
+	}
+	.miembros{
+		/*display: flex;
+		justify-content: center !important;
+		align-items: center;
+		align-content: center;
+		flex-direction: column;*/
+	}
+		.tarjeta{
+			/*margin-left: 15%;*/
+		}
+
+	/*ESTACIONES*/
+	.estacion{
+		margin-left: 0% !important;
+	}
+
+	/*FOOTER*/
+	footer{
+		padding-bottom: 10px;
+		box-sizing: border-box;
+	}
+		footer h2{
+			color: var(--verdeoscuro);
+			font-size: 1.2rem;
+			text-align: center;
+		}
+		footer ul li a, footer ul li{
+			text-align: center !important;
+		}
+		footer .colab img{
+			height: 40px;
+		}
+}
+
+@media (min-width: 768px) and (max-width:768px) {
+    .dos-img{
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		flex-direction: row;
+	}
+
+	.wrap{
+		display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	    -ms-box-orient: horizontal;
+	}
+}
