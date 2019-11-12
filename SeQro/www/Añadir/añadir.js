@@ -138,27 +138,40 @@ function busqueda(){
     
     $("#busqueda").on("change", function() { 
         busqueda = document.getElementById("busqueda").value;
-        // $.ajax({
+        $.ajax({
         
-        //     url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+busqueda+'&key=AIzaSyCaUsFIg2fvx0Y_uSpMq1opvveg6tt5SZ0',
-        //     type: 'get',
-        //     success: function(data){
+            url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+busqueda+'&key=AIzaSyCaUsFIg2fvx0Y_uSpMq1opvveg6tt5SZ0',
+            type: 'get',
+            headers: {
+                'Access-Control-Allow-Credentials' : true,
+                'Access-Control-Allow-Origin':'*',
+                'Access-Control-Allow-Methods':'GET',
+                'Access-Control-Allow-Headers':'application/json',
+            },
+            success: function(data){
         
-        //         console.log(data);
+                console.log(data);
         
-        //     },
-        //     failure: function(data){
+            },
+            failure: function(data){
         
-        //         alert("failure");
+                alert("failure");
         
+            }
+        
+        });
+        // var http_request;
+        // http_request = new XMLHttpRequest();
+        // http_request.onreadystatechange = function () {
+        //     if (this.readyState == 4 && this.status == 200) {
+
+        //         console.log(http_request.responseText);
+                
         //     }
-        
-        // });
-        var http_request;
-        http_request = new XMLHTTPRequest();
-        http_request.onreadystatechange = function (data) { console.log(data); };
-        http_request.open("GET", 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+busqueda+'&key=AIzaSyCaUsFIg2fvx0Y_uSpMq1opvveg6tt5SZ0');
-        http_request.setRequestHeader("Content-Type", "application/json");
+        // };
+        // http_request.open("GET", 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+busqueda+'&key=AIzaSyCaUsFIg2fvx0Y_uSpMq1opvveg6tt5SZ0');
+        // http_request.setRequestHeader("Content-Type", "application/json");
+        // http_request.send();
     }); 
     
 }
