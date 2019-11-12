@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="añadir.css">
+    <script src="añadir.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCaUsFIg2fvx0Y_uSpMq1opvveg6tt5SZ0&callback=mostrarMapa"
+    defer async></script>
+
+    <title>Añadir</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="mapa" id="mapaAñadir">
+
+        </div>
+        <div class="añadir">
+            <div class="pull" onclick="hideBox()"></div>
+            <h3 class="titulo">Añadir Reporte</h3>
+            <p class="parrafo">Ubicación</p>
+            <button class="select">Ubicación marcada en el mapa</button>
+            <p class="parrafo">Categoría</p>
+            <select name="categorias" id="categorias" class="select">
+                <option value="1">Robos</option>
+                <option value="2">Ascesinatos</option>
+                <option value="3">Atropellos</option>
+            </select> <br>
+            <button class="button">Enviar</button>
+        </div>
+        <div class="añadir" style="display: none; height: 20px;">
+            <div class="pull" onclick="showBox()"></div>
+        </div>
+    </div>
+</body>
+</html>
